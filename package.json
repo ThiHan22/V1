@@ -2,10 +2,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
-    "build": "npm run setup && next build",
-    "build-only": "next build",
-    "start": "next start",
-    "setup": "node ./setup.mjs"
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "@types/node": "20.10.0",

@@ -23,26 +23,6 @@ function ArrowIcon() {
     </svg>
   );
 }
-function BlogLink({ slug, name }) {
-  return (
-    <div className="group">
-      <a
-        href={`/blog/${slug}`}
-        className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded flex items-center justify-between px-3 py-4 w-full"
-      >
-        <div className="flex flex-col">
-          <p className="font-medium text-neutral-900 dark:text-neutral-100">
-            {name}
-          </p>
-        </div>
-        <div className="text-neutral-700 dark:text-neutral-300 transform transition-transform duration-300 group-hover:-rotate-12">
-          <ArrowIcon />
-        </div>
-      </a>
-    </div>
-  );
-}
-
 
 export default function Page() {
   return (
@@ -133,14 +113,6 @@ export default function Page() {
           career, sharing knowledge along the way.
         </p>
       </div>
-      {/*<div className="my-8 flex flex-col space-y-4 w-full">*/}
-      {/*  <BlogLink*/}
-      {/*    name="What Makes A Great Developer Experience?"*/}
-      {/*    slug="developer-experience-examples"*/}
-      {/*  />*/}
-      {/*  <BlogLink name="What is Developer Relations?" slug="devrel-at-vercel" />*/}
-      {/*  <BlogLink name="The Story of Heroku" slug="heroku" />*/}
-      {/*</div>*/}
       <div className="prose prose-neutral dark:prose-invert">
         <p>
           I invest small angel checks into early stage startups building tools
