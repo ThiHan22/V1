@@ -1,104 +1,84 @@
 import Link from 'next/link';
-
-
+import Image from "next/image";
+import IMG1 from "@/public/Images/1.jpg";
+import IMG2 from "@/public/Images/2.jpg";
+import IMG3 from "@/public/Images/3.jpg";
+import IMG4 from "@/public/Images/4.jpg";
+import IMG5 from "@/public/Images/5.jpg";
+import IMG6 from "@/public/Images/6.jpg";
 export default function WorkPage() {
   return (
     <section>
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">my work</h1>
+      <h1 className="font-medium text-2xl mb-8 tracking-tighter">my projects</h1>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          On a mission to build products developers{' '}
-          <Link href="/blog/developer-experience-examples">love</Link>, and
+          On a mission to build products developers, and
           along the way, teach the next generation of developers. Here's a
           summary of my work so far.
         </p>
-        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Vercel</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          VP of Product
-        </p>
-        <p>
-          I joined <a href="https://vercel.com/home">Vercel</a> early to grow{' '}
-          <a href="https://nextjs.org">Next.js</a> and our developer community.
-          I built our Developer Relations team to teach our community about our
-          products.
-        </p>
-        <ul>
-          <li>
-            In 2021, I was promoted to Director of DevRel. We{' '}
-            <a href="https://twitter.com/kelseyhightower/status/1105985400110112768">
-              translated customer pain
-            </a>{' '}
-            back into the product roadmap. We spoke at{' '}
-            <Link href="/blog/nextjs-conf-2022-recap">conferences</Link>, wrote
-            blog posts, and created videos. We built open-source examples and
-            contributed back to the product.
-          </li>
-          <li>
-            In 2022, I was promoted to VP of Developer Experience, now also
-            leading our product documentation team. My team created a{' '}
-            <a href="https://nextjs.org/learn">new free course</a> to teach
-            Next.js, which had 17 million page views that year.{' '}
-            <a href="https://twitter.com/leeerob/status/1608900031859527682">
-              I shipped.
-            </a>{' '}
-            I partnered with our open-source community, collaborating with
-            frameworks like{' '}
-            <a href="https://vercel.com/docs/frameworks/nuxt">Nuxt</a> and{' '}
-            <a href="https://astro.build/blog/vercel-official-hosting-partner/">
-              Astro
-            </a>{' '}
-            and sponsoring individuals and projects.
-          </li>
-          <li>
-            In 2023, I was promoted to VP of Product, now also leading Product
-            Management.
-          </li>
-        </ul>
-        <p>
-          Since I joined Vercel in 2020, Next.js active developers have grown
-          1000%, now at ~900k. Next.js is now a top 10 software project on
-          GitHub with . It's used by Walmart, ChatGPT, Starbucks, Okta,
-          Datastax, Notion, and <a href="https://nextjs.org/showcase">more</a>.
-        </p>
-        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Hy-Vee</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Senior Software Engineer, 2018 — 2020
-        </p>
-        <p>
-          Hy-Vee, an almost 100-year-old grocery chain in the United States,
-          wanted to build a new version of their digital storefront. I joined a
-          team of <Link href="/blog/product-engineers">product engineers</Link>{' '}
-          working across web and mobile to rebuild their legacy .NET application
-          (~500k MAU) with React and React Native.
-        </p>
-        <p>
-          On the frontend, I led our move from a custom webpack and React
-          configuration to Next.js and the latest React patterns. In the
-          process, I shared my learnings online, helping educate members of the
-          React and Next.js community by creating courses.
-        </p>
-        <p>
-          Throughout my two years, I was able to work on some hard problems:
-          decoupling a decade old monolith into microservices, working with a
-          federated GraphQL API, learning and occasionally managing a Kubernetes
-          cluster, building and implementing a design system, incrementally
-          migrating individual components and routes to a new framework and
-          infrastructure, and more.
-        </p>
-        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Workiva</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Software Engineer, 2015 — 2018
-        </p>
-        <p>
-          Workiva ($WK) is a cloud platform for data reporting and compliance.
-          During my time at Workiva, I gained my first production experience
-          using React. I worked on tooling to help predict and alert and
-          regressions in our SaaS platform, building a product similar to
-          open-source tools like Sentry.
-        </p>
+        <hr className="my-6 border-neutral-100 dark:border-neutral-800"/>
+        <div className="columns-2 sm:columns-3 gap-4 my-8">
+          <div className="relative h-40 mb-4">
+            <Image
+                alt="Me speaking on stage at React Summit about the future of Next.js"
+                src={IMG1}
+                fill
+                sizes="(max-width: 768px) 213px, 33vw"
+                priority
+                className="rounded-lg object-cover"
+            />
+          </div>
+          <div className="relative h-80 mb-4 sm:mb-0">
+            <Image
+                alt="Me, Lydia, and Delba filming the Next.js Conf keynote"
+                src={IMG2}
+                fill
+                sizes="(max-width: 768px) 213px, 33vw"
+                priority
+                className="rounded-lg object-cover object-[-16px] sm:object-center"
+            />
+          </div>
+          <div className="relative h-40 sm:h-80 sm:mb-4">
+            <Image
+                alt="Me standing on stage at Reactathon delivering the keynote"
+                src={IMG3}
+                fill
+                sizes="(max-width: 768px) 213px, 33vw"
+                priority
+                className="rounded-lg object-cover object-top sm:object-center"
+            />
+          </div>
+          <div className="relative h-40 mb-4 sm:mb-0">
+            <Image
+                alt="Me standing on stage at SmashingConf giving a talk about my optimism for the web"
+                src={IMG4}
+                fill
+                sizes="(max-width: 768px) 213px, 33vw"
+                priority
+                className="rounded-lg object-cover"
+            />
+          </div>
+          <div className="relative h-40 mb-4">
+            <Image
+                alt="Me and Guillermo Rauch on stage for Vercel Ship, answering questions from the Next.js community"
+                src={IMG5}
+                fill
+                sizes="(max-width: 768px) 213px, 33vw"
+                priority
+                className="rounded-lg object-cover"
+            />
+          </div>
+          <div className="relative h-80">
+            <Image
+                alt="My badge on top of a pile of badges from a Vercel meetup we held"
+                src={IMG6}
+                fill
+                sizes="(min-width: 768px) 213px, 33vw"
+                priority
+                className="rounded-lg object-cover"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
